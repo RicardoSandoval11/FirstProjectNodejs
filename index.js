@@ -42,6 +42,10 @@ app.use('/api/users', userRoutes);
 app.use('/api/vacancies', vacanciesRoutes);
 
 // static files
-app.use(express.static('public/uploads'));
+app.use(express.static('public'));
+
+app.get('*', (request, response) => {
+    response.sendFile(__dirname+'/public/index.html');
+})
 
 app.listen(3000);
