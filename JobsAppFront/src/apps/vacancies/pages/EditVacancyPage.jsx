@@ -41,62 +41,62 @@ export const EditVacancyPage = () => {
     const [name, setName] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.name != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.name != name){
                 setName(vacancyDetails.name);
             }
         }
-    },[vacancyDetails.name]);
+    },[vacancyDetails]);
 
     const [description, setDescription] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.description != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.description != name){
                 setDescription(vacancyDetails.description);
             }
         }
-    },[vacancyDetails.description]);
+    },[vacancyDetails]);
 
     const [details, setDetails] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.details != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.details != name){
                 setDetails(vacancyDetails.details);
             }
         }
-    },[vacancyDetails.details]);
+    },[vacancyDetails]);
 
     const [category, setCategory] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.category != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.category.id != category){
                 setCategory(vacancyDetails.category.id);
             }
         }
-    },[vacancyDetails.category]);
+    },[vacancyDetails]);
 
     const [salary, setSalary] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.salary != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.salary.id != salary){
                 setSalary(vacancyDetails.salary.id);
             }
         }
-    },[vacancyDetails.salary]);
+    },[vacancyDetails]);
 
     const [positionStatus, setPositionStatus] = useState('');
 
     useEffect(() => {
-        if(vacancyDetails.statusId != undefined){
+        if(vacancyDetails != null){
             if(vacancyDetails.statusId != positionStatus){
                 setPositionStatus(vacancyDetails.statusId);
             }
         }
-    },[vacancyDetails.statusId]);
+    },[vacancyDetails]);
 
     const [image, setImage] = useState('');
     
@@ -184,7 +184,9 @@ export const EditVacancyPage = () => {
         }}
       >
         {
-            salariesStatus == 'searching' || categoriesStatus == 'searching' || statusesStatus == 'searching' ?
+            salariesStatus == 'searching' || 
+            categoriesStatus == 'searching' || 
+            statusesStatus == 'searching' ?
                 <Checking/>
             :
                 <Grid

@@ -128,7 +128,12 @@ export const CreateVacancyPage = () => {
         }}
       >
         {
-            salariesStatus == 'searching' || categoriesStatus == 'searching' || statusesStatus == 'searching' ?
+            salariesStatus == 'searching' || 
+            categoriesStatus == 'searching' || 
+            statusesStatus == 'searching' ||
+            allCategoriesForm == null ||
+            statuses == null ||
+            salaries == null ?
                 <Checking/>
             :
                 <Grid

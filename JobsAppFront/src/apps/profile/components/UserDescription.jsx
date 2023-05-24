@@ -29,7 +29,7 @@ export const UserDescription = ({user}) => {
           textAlign: 'center'
         }}
       >
-        {parse(user.description)}
+        {parse(user.description != null ? user.description : '')}
       </Grid>
     </Grid>
   )
