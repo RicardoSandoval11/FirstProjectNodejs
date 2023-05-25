@@ -167,7 +167,7 @@ export const UpdateMyInformation = () => {
                             width: '100%'
                         }}
                     >
-                        <Typography variant='h5' sx={{fontWeight: 600}}>Update Vacancy</Typography>
+                        <Typography variant='h5' sx={{fontWeight: 600}}>Update my information</Typography>
                     </Grid>
                     <form onSubmit={onSubmitForm}>
                         <Grid
